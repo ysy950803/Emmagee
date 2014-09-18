@@ -28,9 +28,14 @@
     <ImageView
         android:id="@+id/btn_set"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:adjustViewBounds="true"
+        android:scaleType="center"
+        android:maxHeight="40px"
+        android:maxWidth="40px"
         android:padding="@dimen/image_padding"
         android:src="@drawable/btn_save"
-        android:layout_height="wrap_content"
         android:clickable="true" />
 
 </LinearLayout>
