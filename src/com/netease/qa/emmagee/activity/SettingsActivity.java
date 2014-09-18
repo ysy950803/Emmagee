@@ -31,6 +31,7 @@ import android.view.View.OnClickListener;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
@@ -74,6 +75,7 @@ public class SettingsActivity extends Activity {
 
 		ImageView btnSave = (ImageView) findViewById(R.id.btn_set);
 		ImageView goBack = (ImageView) findViewById(R.id.go_back);
+		RelativeLayout floating_item = (RelativeLayout) findViewById(R.id.floating_item);
 		boolean floatingTag = true;
 
 		btnSave.setImageResource(R.drawable.actionbar_bg);
@@ -119,7 +121,7 @@ public class SettingsActivity extends Activity {
 				}
 			}
 		});
-
+		
 		goBack.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
@@ -148,10 +150,11 @@ public class SettingsActivity extends Activity {
 			}
 		});
 
-		chkFloat.setOnClickListener(new OnClickListener() {
+		floating_item.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				try {
+					chkFloat.setChecked(!chkFloat.isChecked());
 					Properties properties = new Properties();
 					properties.load(new FileInputStream(settingTempFile));  
 					properties.setProperty("isfloat", chkFloat.isChecked() ? "true" : "false");
