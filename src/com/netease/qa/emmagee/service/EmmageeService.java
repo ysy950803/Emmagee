@@ -358,18 +358,6 @@ public class EmmageeService extends Service {
 		});
 	}
 
-	// /**
-	// * show the image.
-	// */
-	// private void showImg() {
-	// if (Math.abs(x - startX) < 1.5 && Math.abs(y - startY) < 1.5 &&
-	// !btnStop.isShown()) {
-	// btnStop.setVisibility(View.VISIBLE);
-	// } else if (btnStop.isShown()) {
-	// btnStop.setVisibility(View.GONE);
-	// }
-	// }
-
 	private Runnable task = new Runnable() {
 
 		public void run() {
@@ -480,7 +468,7 @@ public class EmmageeService extends Service {
 						txtTraffic.setText(batt + "," + getString(R.string.traffic) + trafficSize + "KB");
 				}
 				// 当内存为0切cpu使用率为0时则是被测应用退出
-				if ("0".equals(processMemory) && "0.00".equals(processCpuRatio)) {
+				if ("0".equals(processMemory)) {
 					closeOpenedStream();
 					isServiceStop = true;
 					return;
