@@ -276,7 +276,7 @@ public class EmmageeService extends Service {
 			// titles of multiple cpu cores
 			ArrayList<String> cpuList = cpuInfo.getCpuList();
 			for (int i = 0; i < cpuList.size(); i++) {
-				multiCpuTitle += "," + cpuList.get(i) + " " + getString(R.string.total_usage);
+				multiCpuTitle += "," + cpuList.get(i) + getString(R.string.total_usage);
 			}
 			bw.write(getString(R.string.process_package) + ": ," + packageName + "\r\n" + getString(R.string.process_name) + ": ," + processName
 					+ "\r\n" + getString(R.string.process_pid) + ": ," + pid + "\r\n" + getString(R.string.mem_size) + "： ," + totalMemory + "MB\r\n"
@@ -450,8 +450,8 @@ public class EmmageeService extends Service {
 		}
 		ArrayList<String> processInfo = cpuInfo.getCpuRatioInfo(totalBatt, currentBatt, temperature, voltage);
 		if (isFloating) {
-			String processCpuRatio = "0";
-			String totalCpuRatio = "0";
+			String processCpuRatio = "0.00";
+			String totalCpuRatio = "0.00";
 			String trafficSize = "0";
 			int tempTraffic = 0;
 			double trafficMb = 0;

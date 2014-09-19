@@ -42,6 +42,7 @@ import android.view.Window;
 import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -77,6 +78,7 @@ public class MainPageActivity extends Activity {
     private TextView nb_title;
     private ImageView go_back;
     private ImageView btn_set;
+    private LinearLayout layBtnSet;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -142,7 +144,7 @@ public class MainPageActivity extends Activity {
         nb_title.setText(getString(R.string.app_name));
         go_back.setVisibility(ImageView.INVISIBLE);
         btn_set.setImageResource(R.drawable.settings_button);
-        btn_set.setOnClickListener(new OnClickListener() {
+        layBtnSet.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 goToSettingsActivity();
@@ -156,6 +158,7 @@ public class MainPageActivity extends Activity {
         btn_set = (ImageView) findViewById(R.id.btn_set);
         lstViProgramme = (ListView) findViewById(R.id.processList);
         btnTest = (Button) findViewById(R.id.test);
+        layBtnSet = (LinearLayout) findViewById(R.id.lay_btn_set);
     }
 
 	/**

@@ -22,6 +22,7 @@
         </activity>
 
         <activity android:name=".activity.SettingsActivity"
+            	  android:theme="@style/customTheme"
                   android:screenOrientation="portrait"/>
 
         <activity android:name=".activity.AboutActivity"
