@@ -205,11 +205,10 @@ public class MailSettingsActivity extends Activity {
 	 * @return true: valid email address
 	 */
 	private boolean checkMailFormat(String mail) {
-		String strPattern = "^[a-zA-Z][\\w\\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\\w\\.-]*"
+		String strPattern = "^[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\\w\\.-]*"
 				+ "[a-zA-Z0-9]\\.[a-zA-Z][a-zA-Z\\.]*[a-zA-Z]$";
 		Pattern p = Pattern.compile(strPattern);
 		Matcher m = p.matcher(mail);
 		return m.matches();
 	}
-
 }
