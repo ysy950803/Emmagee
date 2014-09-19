@@ -63,6 +63,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Are you sure to exit？</string>
+    <string name="quite_alert">Click again to exit</string>
     
     <string name="about">About</string>
     <string name="mail_settings">Mail Settings</string>
