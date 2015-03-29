@@ -33,7 +33,7 @@ import com.netease.qa.emmagee.R;
 
 /**
  * About Page of Emmagee
- * 
+ * @student ysy
  * @author andrewleo
  */
 public class AboutActivity extends Activity {
